@@ -153,6 +153,7 @@
             Controls.Add(pbSlika);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmNoviStudent";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Podaci o studentu";
             Load += frmNoviStudent_Load;
             ((System.ComponentModel.ISupportInitialize)pbSlika).EndInit();

@@ -37,7 +37,7 @@ namespace Student.AO.forme
                 {
                     var student = StudentiPodaci[i];
                     var red = tabela.NewRow();
-                    bool placeno = student.Datum.Year == DateTime.Now.Year && student.Datum.Month == DateTime.Now.Month;
+                    bool placeno = (DateTime.Now - student.Datum).TotalDays <= 30;
                     red["Ime"] = student.Ime.ToString();
                     red["Prezime"] = student.Prezime.ToString();
                     red["BrojObroka"] = placeno ? student.BrojObroka : 0;
@@ -70,7 +70,7 @@ namespace Student.AO.forme
                 {
                     var student = StudentiPodaci[i];
                     var red = tabela.NewRow();
-                    bool placeno = student.Datum.Year == DateTime.Now.Year && student.Datum.Month == DateTime.Now.Month;
+                    bool placeno = (DateTime.Now - student.Datum).TotalDays <= 30;
                     red["Ime"] = student.Ime.ToString();
                     red["Prezime"] = student.Prezime.ToString();
                     red["BrojObroka"] = placeno ? student.BrojObroka : 0;
@@ -101,6 +101,7 @@ namespace Student.AO.forme
 
         private void btnDodaj_Click(object sender, EventArgs e)
         {
+            Hide();
             var novaForma = new frmNoviStudent(null);
             novaForma.ShowDialog();
             UcitajPodakte();
@@ -110,6 +111,7 @@ namespace Student.AO.forme
         {
             if (e.ColumnIndex == 5)
             {
+                Hide();
                 var novaForma = new frmNoviStudent(StudentiPodaci[e.RowIndex]);
                 novaForma.ShowDialog();
                 UcitajPodakte();
