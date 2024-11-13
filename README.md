@@ -1,5 +1,4 @@
 # Aplikacija za obroke u restoranu
-# Student Meal Management Application
 
 ## Opis
 Ova aplikacija je dizajnirana za studente koji koriste obroke u restoranu. Omogućava jednostavno upravljanje studentima, njihovim obrocima i uplatama putem intuitivnog korisničkog interfejsa.
