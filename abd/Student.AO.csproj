@@ -13,7 +13,11 @@
   </ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="ReportViewerCore.WinForms" Version="15.1.19" />
+		<PackageReference Include="Guna.UI2.WinForms" Version="2.0.4.6" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.10" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.10" />
+		<PackageReference Include="ReportViewerCore.WinForms" Version="15.1.23" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.1" />
 		<PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
 	</ItemGroup>
 
@@ -53,5 +57,11 @@
   <ItemGroup>
     <Folder Include="Resources\" />
   </ItemGroup>
+	<ItemGroup>
+		<None Update="Guna.UI2.dll">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
 
 </Project>

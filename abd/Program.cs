@@ -13,7 +13,16 @@ namespace Student.AO
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmPocetna());
+            try
+            {
+                Application.Run(new frmPocetna());
+            }
+            catch (Exception ex)
+            {
+                File.WriteAllText("error_log.txt", $"Exception: {ex.Message}\nStackTrace: {ex.StackTrace}");
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+
         }
     }
 }

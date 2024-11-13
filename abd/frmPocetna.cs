@@ -1,4 +1,6 @@
-﻿using Student.AO.forme;
+﻿using apk.baza;
+using apk.klase;
+using Student.AO.forme;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,21 +15,24 @@ namespace Student.AO
 {
     public partial class frmPocetna : Form
     {
+        Baza db = new Baza();
+
         public frmPocetna()
         {
             InitializeComponent();
+            lbBr.Text = "Broj studenata u bazi: " + db.Studenti.Count().ToString(); 
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void btnPretraga_Click(object sender, EventArgs e)
         {
             var forma = new frmStudenti();
             forma.ShowDialog();
         }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnSkenirajObrok_Click(object sender, EventArgs e)
         {
             var forma = new frmUnesiBrojKartice();
             forma.ShowDialog();
         }
+
+        
     }
 }

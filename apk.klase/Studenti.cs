@@ -8,6 +8,7 @@
         public int BrojObroka { get; set; }
         public int BrojKartice { get; set; }
         public DateTime Datum { get; set; }
+        public DateTime VrijemeZadnjegObroka { get; set; }
         public byte[] Slika { get; set; }
         public override string ToString()
         {

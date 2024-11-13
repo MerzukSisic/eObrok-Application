@@ -33,6 +33,7 @@ namespace Student.AO.forme
                 tabela.Columns.Add("BrojObroka");
                 tabela.Columns.Add("Datum");
                 tabela.Columns.Add("Placeno");
+                tabela.Columns.Add("VrijemeZadnjegObroka");
                 for (int i = 0; i < StudentiPodaci.Count; i++)
                 {
                     var student = StudentiPodaci[i];
@@ -43,6 +44,8 @@ namespace Student.AO.forme
                     red["BrojObroka"] = placeno ? student.BrojObroka : 0;
                     red["Datum"] = student.Datum.ToString();
                     DateTime datum = student.Datum;
+                    red["VrijemeZadnjegObroka"] = student.VrijemeZadnjegObroka.ToString();
+                    DateTime VrijemeZadnjegObroka = student.VrijemeZadnjegObroka;
                     red["Placeno"] = placeno;
                     tabela.Rows.Add(red);
                 }
@@ -66,6 +69,7 @@ namespace Student.AO.forme
                 tabela.Columns.Add("BrojObroka");
                 tabela.Columns.Add("Datum");
                 tabela.Columns.Add("Placeno");
+                tabela.Columns.Add("VrijemeZadnjegObroka");
                 for (int i = 0; i < StudentiPodaci.Count; i++)
                 {
                     var student = StudentiPodaci[i];
@@ -76,6 +80,8 @@ namespace Student.AO.forme
                     red["BrojObroka"] = placeno ? student.BrojObroka : 0;
                     red["Datum"] = student.Datum.ToString();
                     DateTime datum = student.Datum;
+                    red["VrijemeZadnjegObroka"] = student.VrijemeZadnjegObroka.ToString();
+                    DateTime VrijemeZadnjegObroka = student.VrijemeZadnjegObroka;
                     red["Placeno"] = placeno;
                     tabela.Rows.Add(red);
                 }
@@ -83,31 +89,7 @@ namespace Student.AO.forme
                 dgvStudenti.DataSource = tabela;
             }
         }
-
-        private void tbIme_TextChanged(object sender, EventArgs e)
-        {
-            UcitajPodakte();
-        }
-
-        private void dtpOd_ValueChanged(object sender, EventArgs e)
-        {
-            UcitajPodakte();
-        }
-
-        private void dtpDo_ValueChanged(object sender, EventArgs e)
-        {
-            UcitajPodakte();
-        }
-
-        private void btnDodaj_Click(object sender, EventArgs e)
-        {
-            Hide();
-            var novaForma = new frmNoviStudent(null);
-            novaForma.ShowDialog();
-            UcitajPodakte();
-        }
-
-        private void dgvStudenti_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvStudenti_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 5)
             {
@@ -116,6 +98,30 @@ namespace Student.AO.forme
                 novaForma.ShowDialog();
                 UcitajPodakte();
             }
+        }
+        private void tbIme_TextChanged_1(object sender, EventArgs e)
+        {
+            UcitajPodakte();
+        }
+        private void dtpOd_ValueChanged(object sender, EventArgs e)
+        {
+            UcitajPodakte();
+        }
+        private void dtpDo_ValueChanged(object sender, EventArgs e)
+        {
+            UcitajPodakte();
+        }
+        private void btnDodaj_Click_1(object sender, EventArgs e)
+        {
+            Hide();
+            var novaForma = new frmNoviStudent(null);
+            novaForma.ShowDialog();
+            UcitajPodakte();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

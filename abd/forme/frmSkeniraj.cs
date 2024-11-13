@@ -31,17 +31,17 @@ namespace Student.AO.forme
         private void UcitajPodatke()
         {
             pbSlika.Image = Ekstenzije.ToImage(student.Slika);
-            lblIme.Text = student.Ime;
-            lblPrezime.Text = student.Prezime;
-            lblBrojObroka.Text = student.BrojObroka.ToString();
-            lblBrojKartice.Text = student.BrojKartice.ToString();
+            tbIme.Text = student.Ime;
+            tbPrezime.Text = student.Prezime;
+            tbBrojObroka.Text = student.BrojObroka.ToString();
+            tbBrojKartice.Text = student.BrojKartice.ToString();
         }
 
-        private void btnUzmiObrok_Click(object sender, EventArgs e)
+        private void btnSkeniraj_Click(object sender, EventArgs e)
         {
             if (student.BrojObroka > 0)
             {
-                student.BrojObroka--; 
+                student.BrojObroka--;
                 MessageBox.Show($"Broj obroka smanjen. Preostalo: {student.BrojObroka}", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 db.Studenti.Update(student);
                 db.SaveChanges();
@@ -51,6 +51,11 @@ namespace Student.AO.forme
             {
                 MessageBox.Show("Student nema više obroka na raspolaganju.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
