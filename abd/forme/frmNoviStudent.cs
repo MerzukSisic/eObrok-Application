@@ -25,38 +25,6 @@ namespace Student.AO.forme
             this.studenti = studenti;
             InitializeComponent();
         }
-
-        private void btnSpasi_Click(object sender, EventArgs e)
-        {
-            if (ValidniPodaci())
-            {
-                if (studenti == null)
-                {
-                    var noviStudent = new Studenti
-                    {
-                        Ime = tbIme.Text,
-                        Prezime = tbPrezime.Text,
-                        BrojObroka = 44,
-                        BrojKartice = (db.Studenti.Any() ? db.Studenti.Max(s => s.BrojKartice) + 1 : 001),
-                        Datum = DateTime.Now,
-                        Slika = Ekstenzije.ToByteArray(pbSlika.Image),
-                    };
-                    db.Studenti.Add(noviStudent);
-                    db.SaveChanges();
-                    Close();
-                }
-                else
-                {
-                    studenti.Ime = tbIme.Text;
-                    studenti.Prezime = tbPrezime.Text;
-                    studenti.Datum = dateTimePicker1.Value;
-                    db.Studenti.Update(studenti);
-                    db.SaveChanges();
-                    Close();
-                }
-            }
-        }
-
         private bool ValidniPodaci()
         {
             return Helpers.Validator.ProvjeriUnos(tbIme, err, "Obavezna vrijednosti") &&
@@ -68,10 +36,11 @@ namespace Student.AO.forme
         {
             if (studenti != null)
             {
+                tbBrojKartice.Text = studenti.BrojKartice.ToString();
                 tbIme.Text = studenti.Ime;
                 tbPrezime.Text = studenti.Prezime;
                 pbSlika.Image = Ekstenzije.ToImage(studenti.Slika);
-                dateTimePicker1.Value = studenti.Datum;
+                dtpUplaceno.Value = studenti.Datum;
             }
         }
 
@@ -98,6 +67,59 @@ namespace Student.AO.forme
                 Close();
             }
 
+        }
+
+        private void btnSpremi_Click(object sender, EventArgs e)
+        {
+            if (ValidniPodaci())
+            {
+                if (studenti == null)
+                {
+                    var noviStudent = new Studenti
+                    {
+                        Ime = tbIme.Text,
+                        Prezime = tbPrezime.Text,
+                        BrojObroka = 44,
+                        BrojKartice = (db.Studenti.Any() ? db.Studenti.Max(s => s.BrojKartice) + 1 : 001),
+                        Datum = DateTime.Now,
+                        Slika = Ekstenzije.ToByteArray(pbSlika.Image),
+                    };
+                    db.Studenti.Add(noviStudent);
+                    db.SaveChanges();
+                    Close();
+                }
+                else
+                {
+                    studenti.Ime = tbIme.Text;
+                    studenti.Prezime = tbPrezime.Text;
+                    studenti.Datum = dtpUplaceno.Value;
+                    studenti.Slika = Ekstenzije.ToByteArray(pbSlika.Image);
+                    db.Studenti.Update(studenti);
+                    db.SaveChanges();
+                    Close();
+                }
+            }
+        }
+
+        private void btnObnoviObroke_Click(object sender, EventArgs e)
+        {
+            studenti.BrojObroka = 44;
+            studenti.Datum = DateTime.Now;
+            db.Studenti.Update(studenti);
+            db.SaveChanges();
+            Close();
+        }
+
+        private void btnIzbrisi_Click_1(object sender, EventArgs e)
+        {
+            db.Studenti.Remove(studenti);
+            db.SaveChanges();
+            Close();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

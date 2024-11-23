@@ -87,6 +87,7 @@
             btnPretraga.AutoRoundedCorners = true;
             btnPretraga.BackColor = Color.Transparent;
             btnPretraga.BorderRadius = 49;
+            btnPretraga.BorderThickness = 2;
             btnPretraga.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             btnPretraga.CheckedState.FillColor = Color.Black;
             btnPretraga.CheckedState.ForeColor = Color.Tan;
@@ -101,8 +102,8 @@
             btnPretraga.FillColor = Color.Tan;
             btnPretraga.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnPretraga.ForeColor = Color.Black;
-            btnPretraga.HoverState.FillColor = Color.Tan;
-            btnPretraga.HoverState.ForeColor = Color.Black;
+            btnPretraga.HoverState.FillColor = Color.Black;
+            btnPretraga.HoverState.ForeColor = Color.Tan;
             btnPretraga.Location = new Point(91, 120);
             btnPretraga.Name = "btnPretraga";
             btnPretraga.ShadowDecoration.Color = Color.White;
@@ -118,6 +119,7 @@
             btnSkenirajObrok.AutoRoundedCorners = true;
             btnSkenirajObrok.BackColor = Color.Transparent;
             btnSkenirajObrok.BorderRadius = 49;
+            btnSkenirajObrok.BorderThickness = 2;
             btnSkenirajObrok.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             btnSkenirajObrok.CheckedState.FillColor = Color.Tan;
             btnSkenirajObrok.CheckedState.ForeColor = Color.Black;
@@ -201,6 +203,7 @@
             Name = "frmPocetna";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Obroci 2024/25";
+            Load += frmPocetna_Load;
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
             guna2CustomGradientPanel1.ResumeLayout(false);
             ResumeLayout(false);

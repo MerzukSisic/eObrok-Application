@@ -53,6 +53,7 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
+            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             tbIme = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dtpOd = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -66,7 +67,6 @@
             Datum = new DataGridViewTextBoxColumn();
             Placeno = new DataGridViewCheckBoxColumn();
             Dodaj = new DataGridViewButtonColumn();
-            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStudenti).BeginInit();
             SuspendLayout();
@@ -75,6 +75,9 @@
             // 
             guna2ControlBox3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ControlBox3.BackColor = Color.Black;
+            guna2ControlBox3.BorderColor = Color.White;
+            guna2ControlBox3.BorderRadius = 2;
+            guna2ControlBox3.BorderThickness = 2;
             guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             guna2ControlBox3.CustomizableEdges = customizableEdges1;
             guna2ControlBox3.FillColor = Color.Black;
@@ -86,11 +89,14 @@
             guna2ControlBox3.Name = "guna2ControlBox3";
             guna2ControlBox3.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox3.Size = new Size(40, 20);
-            guna2ControlBox3.TabIndex = 1;
+            guna2ControlBox3.TabIndex = 0;
             // 
             // guna2ControlBox1
             // 
             guna2ControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox1.BorderColor = Color.White;
+            guna2ControlBox1.BorderRadius = 2;
+            guna2ControlBox1.BorderThickness = 2;
             guna2ControlBox1.CustomizableEdges = customizableEdges3;
             guna2ControlBox1.FillColor = Color.Black;
             guna2ControlBox1.HoverState.FillColor = Color.Tan;
@@ -100,7 +106,7 @@
             guna2ControlBox1.Name = "guna2ControlBox1";
             guna2ControlBox1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2ControlBox1.Size = new Size(40, 20);
-            guna2ControlBox1.TabIndex = 3;
+            guna2ControlBox1.TabIndex = 1;
             // 
             // guna2HtmlLabel1
             // 
@@ -147,8 +153,22 @@
             btnBack.TabIndex = 8;
             btnBack.Click += btnBack_Click;
             // 
+            // guna2HtmlLabel4
+            // 
+            guna2HtmlLabel4.BackColor = Color.Transparent;
+            guna2HtmlLabel4.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
+            guna2HtmlLabel4.ForeColor = Color.White;
+            guna2HtmlLabel4.Location = new Point(306, 0);
+            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            guna2HtmlLabel4.Size = new Size(189, 30);
+            guna2HtmlLabel4.TabIndex = 4;
+            guna2HtmlLabel4.Text = "Pretraga studenata:";
+            // 
             // tbIme
             // 
+            tbIme.BorderColor = Color.Black;
+            tbIme.BorderRadius = 2;
+            tbIme.BorderThickness = 2;
             tbIme.CustomizableEdges = customizableEdges8;
             tbIme.DefaultText = "";
             tbIme.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -165,7 +185,7 @@
             tbIme.SelectedText = "";
             tbIme.ShadowDecoration.CustomizableEdges = customizableEdges9;
             tbIme.Size = new Size(572, 26);
-            tbIme.TabIndex = 6;
+            tbIme.TabIndex = 0;
             tbIme.TextChanged += tbIme_TextChanged_1;
             // 
             // guna2HtmlLabel2
@@ -180,6 +200,8 @@
             // 
             // dtpOd
             // 
+            dtpOd.BorderRadius = 2;
+            dtpOd.BorderThickness = 2;
             dtpOd.Checked = true;
             dtpOd.CustomizableEdges = customizableEdges10;
             dtpOd.FillColor = Color.Tan;
@@ -191,7 +213,7 @@
             dtpOd.Name = "dtpOd";
             dtpOd.ShadowDecoration.CustomizableEdges = customizableEdges11;
             dtpOd.Size = new Size(199, 29);
-            dtpOd.TabIndex = 7;
+            dtpOd.TabIndex = 1;
             dtpOd.Value = new DateTime(2024, 11, 3, 1, 5, 42, 256);
             dtpOd.ValueChanged += dtpOd_ValueChanged;
             // 
@@ -207,6 +229,8 @@
             // 
             // dtpDo
             // 
+            dtpDo.BorderRadius = 2;
+            dtpDo.BorderThickness = 2;
             dtpDo.Checked = true;
             dtpDo.CheckedState.FillColor = Color.Tan;
             dtpDo.CheckedState.ForeColor = Color.Black;
@@ -222,7 +246,7 @@
             dtpDo.Name = "dtpDo";
             dtpDo.ShadowDecoration.CustomizableEdges = customizableEdges13;
             dtpDo.Size = new Size(206, 29);
-            dtpDo.TabIndex = 7;
+            dtpDo.TabIndex = 2;
             dtpDo.Value = new DateTime(2024, 11, 3, 1, 5, 42, 256);
             dtpDo.ValueChanged += dtpDo_ValueChanged;
             // 
@@ -231,6 +255,7 @@
             btnDodaj.Animated = true;
             btnDodaj.AutoRoundedCorners = true;
             btnDodaj.BorderRadius = 29;
+            btnDodaj.BorderThickness = 2;
             btnDodaj.CheckedState.FillColor = Color.Tan;
             btnDodaj.CheckedState.ForeColor = Color.Black;
             btnDodaj.CustomizableEdges = customizableEdges14;
@@ -248,7 +273,7 @@
             btnDodaj.RightToLeft = RightToLeft.No;
             btnDodaj.ShadowDecoration.CustomizableEdges = customizableEdges15;
             btnDodaj.Size = new Size(156, 61);
-            btnDodaj.TabIndex = 8;
+            btnDodaj.TabIndex = 4;
             btnDodaj.Text = "Dodaj studenta";
             btnDodaj.Click += btnDodaj_Click_1;
             // 
@@ -298,7 +323,7 @@
             dgvStudenti.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvStudenti.RowHeadersVisible = false;
             dgvStudenti.Size = new Size(842, 368);
-            dgvStudenti.TabIndex = 9;
+            dgvStudenti.TabIndex = 3;
             dgvStudenti.ThemeStyle.AlternatingRowsStyle.BackColor = Color.White;
             dgvStudenti.ThemeStyle.AlternatingRowsStyle.Font = new Font("Segoe UI", 9F);
             dgvStudenti.ThemeStyle.AlternatingRowsStyle.ForeColor = SystemColors.ControlText;
@@ -370,17 +395,6 @@
             Dodaj.ReadOnly = true;
             Dodaj.Text = "Uredi";
             Dodaj.UseColumnTextForButtonValue = true;
-            // 
-            // guna2HtmlLabel4
-            // 
-            guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
-            guna2HtmlLabel4.ForeColor = Color.White;
-            guna2HtmlLabel4.Location = new Point(306, 0);
-            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(189, 30);
-            guna2HtmlLabel4.TabIndex = 4;
-            guna2HtmlLabel4.Text = "Pretraga studenata:";
             // 
             // frmStudenti
             // 

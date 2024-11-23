@@ -15,7 +15,7 @@ namespace Student.AO.forme
         }
         private void frmUnesiBrojKartice_Load(object sender, EventArgs e)
         {
-
+         
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)
@@ -42,9 +42,6 @@ namespace Student.AO.forme
                             return;
                         }
                     }
-                    student.VrijemeZadnjegObroka = trenutnoVrijeme;
-                    baza.SaveChanges();
-
                     MessageBox.Show($"Student pronađen: {student.Ime} {student.Prezime}", "Pronađen Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     var nova = new frmSkeniraj(student);
                     nova.ShowDialog();
@@ -60,10 +57,11 @@ namespace Student.AO.forme
                 MessageBox.Show("Molimo unesite važeći broj kartice.", "Greška", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             Close();
         }
+
     }
 }
+

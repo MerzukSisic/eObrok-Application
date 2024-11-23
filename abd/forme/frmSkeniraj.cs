@@ -39,10 +39,12 @@ namespace Student.AO.forme
 
         private void btnSkeniraj_Click(object sender, EventArgs e)
         {
+            DateTime trenutnoVrijeme = DateTime.Now;
             if (student.BrojObroka > 0)
             {
                 student.BrojObroka--;
                 MessageBox.Show($"Broj obroka smanjen. Preostalo: {student.BrojObroka}", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                student.VrijemeZadnjegObroka = trenutnoVrijeme;
                 db.Studenti.Update(student);
                 db.SaveChanges();
                 Close();

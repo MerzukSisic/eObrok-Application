@@ -74,7 +74,7 @@ namespace Student.AO.forme
                 {
                     var student = StudentiPodaci[i];
                     var red = tabela.NewRow();
-                    bool placeno = (DateTime.Now - student.Datum).TotalDays <= 30;
+                    bool placeno = (DateTime.Now - student.Datum).TotalDays <= 31;
                     red["Ime"] = student.Ime.ToString();
                     red["Prezime"] = student.Prezime.ToString();
                     red["BrojObroka"] = placeno ? student.BrojObroka : 0;
@@ -83,8 +83,12 @@ namespace Student.AO.forme
                     red["VrijemeZadnjegObroka"] = student.VrijemeZadnjegObroka.ToString();
                     DateTime VrijemeZadnjegObroka = student.VrijemeZadnjegObroka;
                     red["Placeno"] = placeno;
+
+                    if (placeno == false) student.BrojObroka = 0;
                     tabela.Rows.Add(red);
+               
                 }
+                
                 dgvStudenti.DataSource = null;
                 dgvStudenti.DataSource = tabela;
             }

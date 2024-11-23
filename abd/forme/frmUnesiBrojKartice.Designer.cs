@@ -116,6 +116,9 @@
             // guna2ControlBox7
             // 
             guna2ControlBox7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox7.BorderColor = Color.White;
+            guna2ControlBox7.BorderRadius = 2;
+            guna2ControlBox7.BorderThickness = 2;
             guna2ControlBox7.CustomizableEdges = customizableEdges2;
             guna2ControlBox7.FillColor = Color.Black;
             guna2ControlBox7.HoverState.FillColor = Color.Tan;
@@ -131,6 +134,9 @@
             // 
             guna2ControlBox8.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ControlBox8.BackColor = Color.Black;
+            guna2ControlBox8.BorderColor = Color.White;
+            guna2ControlBox8.BorderRadius = 2;
+            guna2ControlBox8.BorderThickness = 2;
             guna2ControlBox8.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             guna2ControlBox8.CustomizableEdges = customizableEdges4;
             guna2ControlBox8.FillColor = Color.Black;
@@ -248,6 +254,9 @@
             // 
             // tbBrojKartice
             // 
+            tbBrojKartice.BorderColor = Color.Black;
+            tbBrojKartice.BorderRadius = 3;
+            tbBrojKartice.BorderThickness = 2;
             tbBrojKartice.CustomizableEdges = customizableEdges20;
             tbBrojKartice.DefaultText = "";
             tbBrojKartice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
@@ -265,13 +274,14 @@
             tbBrojKartice.SelectedText = "";
             tbBrojKartice.ShadowDecoration.CustomizableEdges = customizableEdges21;
             tbBrojKartice.Size = new Size(314, 32);
-            tbBrojKartice.TabIndex = 9;
+            tbBrojKartice.TabIndex = 0;
             // 
             // btnDodaj
             // 
             btnDodaj.Animated = true;
             btnDodaj.AutoRoundedCorners = true;
             btnDodaj.BorderRadius = 13;
+            btnDodaj.BorderThickness = 2;
             btnDodaj.CheckedState.FillColor = Color.Tan;
             btnDodaj.CheckedState.ForeColor = Color.Black;
             btnDodaj.CustomizableEdges = customizableEdges22;
@@ -280,6 +290,7 @@
             btnDodaj.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDodaj.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDodaj.FillColor = Color.Tan;
+            btnDodaj.FocusedColor = Color.FromArgb(94, 148, 255);
             btnDodaj.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             btnDodaj.ForeColor = Color.Black;
             btnDodaj.HoverState.FillColor = Color.Black;
@@ -289,7 +300,7 @@
             btnDodaj.RightToLeft = RightToLeft.No;
             btnDodaj.ShadowDecoration.CustomizableEdges = customizableEdges23;
             btnDodaj.Size = new Size(150, 29);
-            btnDodaj.TabIndex = 10;
+            btnDodaj.TabIndex = 1;
             btnDodaj.Text = "Skeniraj karticu";
             btnDodaj.Click += btnDodaj_Click;
             // 

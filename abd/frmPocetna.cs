@@ -20,7 +20,6 @@ namespace Student.AO
         public frmPocetna()
         {
             InitializeComponent();
-            lbBr.Text = "Broj studenata u bazi: " + db.Studenti.Count().ToString(); 
         }
         private void btnPretraga_Click(object sender, EventArgs e)
         {
@@ -33,6 +32,9 @@ namespace Student.AO
             forma.ShowDialog();
         }
 
-        
+        private void frmPocetna_Load(object sender, EventArgs e)
+        {
+            lbBr.Text = "Broj studenata u bazi: " + db.Studenti.Count().ToString();
+        }
     }
 }

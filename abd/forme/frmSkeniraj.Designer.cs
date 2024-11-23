@@ -131,8 +131,13 @@
             // guna2ControlBox11
             // 
             guna2ControlBox11.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            guna2ControlBox11.BackColor = Color.Black;
+            guna2ControlBox11.BorderColor = Color.White;
+            guna2ControlBox11.BorderRadius = 2;
+            guna2ControlBox11.BorderThickness = 2;
             guna2ControlBox11.CustomizableEdges = customizableEdges1;
             guna2ControlBox11.FillColor = Color.Black;
+            guna2ControlBox11.ForeColor = Color.White;
             guna2ControlBox11.HoverState.FillColor = Color.Tan;
             guna2ControlBox11.HoverState.IconColor = Color.Black;
             guna2ControlBox11.IconColor = Color.Tan;
@@ -140,12 +145,15 @@
             guna2ControlBox11.Name = "guna2ControlBox11";
             guna2ControlBox11.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2ControlBox11.Size = new Size(40, 20);
-            guna2ControlBox11.TabIndex = 13;
+            guna2ControlBox11.TabIndex = 1;
             // 
             // guna2ControlBox12
             // 
             guna2ControlBox12.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             guna2ControlBox12.BackColor = Color.Black;
+            guna2ControlBox12.BorderColor = Color.White;
+            guna2ControlBox12.BorderRadius = 2;
+            guna2ControlBox12.BorderThickness = 2;
             guna2ControlBox12.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             guna2ControlBox12.CustomizableEdges = customizableEdges3;
             guna2ControlBox12.FillColor = Color.Black;
@@ -157,7 +165,7 @@
             guna2ControlBox12.Name = "guna2ControlBox12";
             guna2ControlBox12.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2ControlBox12.Size = new Size(40, 20);
-            guna2ControlBox12.TabIndex = 14;
+            guna2ControlBox12.TabIndex = 0;
             // 
             // guna2ControlBox9
             // 
@@ -482,6 +490,7 @@
             btnSkeniraj.Animated = true;
             btnSkeniraj.AutoRoundedCorners = true;
             btnSkeniraj.BorderRadius = 18;
+            btnSkeniraj.BorderThickness = 2;
             btnSkeniraj.CheckedState.FillColor = Color.Tan;
             btnSkeniraj.CheckedState.ForeColor = Color.Black;
             btnSkeniraj.CustomizableEdges = customizableEdges38;
@@ -499,7 +508,7 @@
             btnSkeniraj.RightToLeft = RightToLeft.No;
             btnSkeniraj.ShadowDecoration.CustomizableEdges = customizableEdges39;
             btnSkeniraj.Size = new Size(168, 38);
-            btnSkeniraj.TabIndex = 18;
+            btnSkeniraj.TabIndex = 0;
             btnSkeniraj.Text = "Skeniraj obrok";
             btnSkeniraj.Click += btnSkeniraj_Click;
             // 
