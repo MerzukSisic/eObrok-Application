@@ -34,7 +34,34 @@ namespace Student.AO
 
         private void frmPocetna_Load(object sender, EventArgs e)
         {
+            ResetujAkoJePotrebno();
             lbBr.Text = "Broj studenata u bazi: " + db.Studenti.Count().ToString();
+        }
+        private void ResetujAkoJePotrebno()
+        {
+            DateTime danasnjiDatum = DateTime.Now.Date;
+
+            // Provjeri da li je resetovanje već obavljeno za trenutni datum
+            var studentiZaReset = db.Studenti.Where(s => s.DatumResetovanja != danasnjiDatum).ToList();
+
+            if (studentiZaReset.Any())
+            {
+                foreach (var student in studentiZaReset)
+                {
+                    student.JeoRucak = false;
+                    student.JeoVeceru = false;
+                    student.DupliRucak = false;
+                    student.DuplaVecera = false;
+                    student.DatumResetovanja = danasnjiDatum;
+                }
+
+                db.SaveChanges();
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

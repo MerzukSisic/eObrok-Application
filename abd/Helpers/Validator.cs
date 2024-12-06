@@ -5,11 +5,11 @@
         public static bool ProvjeriUnos(Control kontrola, ErrorProvider err, string name)
         {
             bool validanUnos = true;
-            if (kontrola is PictureBox && (kontrola as PictureBox).Image == null)
+            if (kontrola is Guna.UI2.WinForms.Guna2PictureBox && (kontrola as Guna.UI2.WinForms.Guna2PictureBox).Image == null)
                 validanUnos = false;
             else if (kontrola is ComboBox && (kontrola as ComboBox).SelectedIndex < 0)
                 validanUnos = false;
-            else if (kontrola is TextBox && !(kontrola as TextBox).Text.Postavljen())
+            else if (kontrola is Guna.UI2.WinForms.Guna2TextBox && !(kontrola as Guna.UI2.WinForms.Guna2TextBox).Text.Postavljen())
                 validanUnos = false;
 
             if (!validanUnos)

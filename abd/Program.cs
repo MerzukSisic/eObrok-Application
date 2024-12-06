@@ -15,7 +15,7 @@ namespace Student.AO
             ApplicationConfiguration.Initialize();
             try
             {
-                Application.Run(new frmPocetna());
+                Application.Run(new frmLogin());
             }
             catch (Exception ex)
             {

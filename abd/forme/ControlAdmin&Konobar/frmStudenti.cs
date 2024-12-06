@@ -78,17 +78,18 @@ namespace Student.AO.forme
                     red["Ime"] = student.Ime.ToString();
                     red["Prezime"] = student.Prezime.ToString();
                     red["BrojObroka"] = placeno ? student.BrojObroka : 0;
-                    red["Datum"] = student.Datum.ToString();
+                    red["Datum"] = student.Datum.ToString("dd/MM/yyyy HH:mm");
                     DateTime datum = student.Datum;
                     red["VrijemeZadnjegObroka"] = student.VrijemeZadnjegObroka.ToString();
                     DateTime VrijemeZadnjegObroka = student.VrijemeZadnjegObroka;
                     red["Placeno"] = placeno;
 
                     if (placeno == false) student.BrojObroka = 0;
+                    db.SaveChanges();
                     tabela.Rows.Add(red);
-               
+
                 }
-                
+
                 dgvStudenti.DataSource = null;
                 dgvStudenti.DataSource = tabela;
             }

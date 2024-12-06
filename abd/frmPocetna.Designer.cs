@@ -36,17 +36,16 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             btnPretraga = new Guna.UI2.WinForms.Guna2Button();
             btnSkenirajObrok = new Guna.UI2.WinForms.Guna2Button();
-            guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             lbBr = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
+            btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
             guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -145,22 +144,10 @@
             btnSkenirajObrok.Text = "Skeniraj obrok";
             btnSkenirajObrok.Click += btnSkenirajObrok_Click;
             // 
-            // guna2CirclePictureBox1
-            // 
-            guna2CirclePictureBox1.Image = Properties.Resources.student_ao;
-            guna2CirclePictureBox1.ImageRotate = 0F;
-            guna2CirclePictureBox1.Location = new Point(456, 221);
-            guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            guna2CirclePictureBox1.Size = new Size(61, 57);
-            guna2CirclePictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            guna2CirclePictureBox1.TabIndex = 3;
-            guna2CirclePictureBox1.TabStop = false;
-            // 
             // guna2CustomGradientPanel1
             // 
             guna2CustomGradientPanel1.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            guna2CustomGradientPanel1.Controls.Add(btnBack);
             guna2CustomGradientPanel1.Controls.Add(guna2ControlBox1);
             guna2CustomGradientPanel1.Controls.Add(guna2ControlBox3);
             guna2CustomGradientPanel1.CustomizableEdges = customizableEdges10;
@@ -188,6 +175,24 @@
             lbBr.TabIndex = 7;
             lbBr.Text = null;
             // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.Transparent;
+            btnBack.CheckedState.ImageSize = new Size(64, 64);
+            btnBack.HoverState.Image = Properties.Resources.arrow_back_24dp_000000_FILL0_wght400_GRAD0_opsz24;
+            btnBack.HoverState.ImageSize = new Size(64, 64);
+            btnBack.Image = Properties.Resources.arrow_back_24dp__D2B48C_FILL0_wght400_GRAD0_opsz241;
+            btnBack.ImageOffset = new Point(0, 0);
+            btnBack.ImageRotate = 0F;
+            btnBack.ImageSize = new Size(40, 40);
+            btnBack.Location = new Point(3, 10);
+            btnBack.Name = "btnBack";
+            btnBack.PressedState.ImageSize = new Size(64, 64);
+            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            btnBack.Size = new Size(55, 20);
+            btnBack.TabIndex = 9;
+            btnBack.Click += btnBack_Click;
+            // 
             // frmPocetna
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -196,7 +201,6 @@
             ClientSize = new Size(517, 280);
             Controls.Add(lbBr);
             Controls.Add(guna2CustomGradientPanel1);
-            Controls.Add(guna2CirclePictureBox1);
             Controls.Add(btnSkenirajObrok);
             Controls.Add(btnPretraga);
             FormBorderStyle = FormBorderStyle.None;
@@ -204,7 +208,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Obroci 2024/25";
             Load += frmPocetna_Load;
-            ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
             guna2CustomGradientPanel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
@@ -216,8 +219,8 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2Button btnPretraga;
         private Guna.UI2.WinForms.Guna2Button btnSkenirajObrok;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbBr;
+        private Guna.UI2.WinForms.Guna2ImageButton btnBack;
     }
 }

@@ -158,7 +158,7 @@
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Segoe UI", 15F, FontStyle.Bold);
             guna2HtmlLabel4.ForeColor = Color.White;
-            guna2HtmlLabel4.Location = new Point(306, 0);
+            guna2HtmlLabel4.Location = new Point(312, 7);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(189, 30);
             guna2HtmlLabel4.TabIndex = 4;
@@ -214,7 +214,7 @@
             dtpOd.ShadowDecoration.CustomizableEdges = customizableEdges11;
             dtpOd.Size = new Size(199, 29);
             dtpOd.TabIndex = 1;
-            dtpOd.Value = new DateTime(2024, 11, 3, 1, 5, 42, 256);
+            dtpOd.Value = new DateTime(2024, 10, 1, 0, 0, 0, 0);
             dtpOd.ValueChanged += dtpOd_ValueChanged;
             // 
             // guna2HtmlLabel3
@@ -247,7 +247,7 @@
             dtpDo.ShadowDecoration.CustomizableEdges = customizableEdges13;
             dtpDo.Size = new Size(206, 29);
             dtpDo.TabIndex = 2;
-            dtpDo.Value = new DateTime(2024, 11, 3, 1, 5, 42, 256);
+            dtpDo.Value = new DateTime(2025, 1, 1, 0, 0, 0, 0);
             dtpDo.ValueChanged += dtpDo_ValueChanged;
             // 
             // btnDodaj

@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 using apk.klase;
+using Student.Klase;
 
 namespace apk.baza
 {
@@ -20,6 +21,7 @@ namespace apk.baza
         }
 
         public DbSet<Studenti> Studenti { get; set; }
-
+        public DbSet<Uposlenici> Korisnici { get;set; }
+        public DbSet<Roles> Roles { get;set; }
     }
 }

@@ -20,11 +20,13 @@ namespace Student.AO.forme
     {
         Baza db = new Baza();
         private Studenti studenti;
+
         public frmNoviStudent(Studenti studenti)
         {
             this.studenti = studenti;
             InitializeComponent();
         }
+
         private bool ValidniPodaci()
         {
             return Helpers.Validator.ProvjeriUnos(tbIme, err, "Obavezna vrijednosti") &&
@@ -43,15 +45,6 @@ namespace Student.AO.forme
                 dtpUplaceno.Value = studenti.Datum;
             }
         }
-
-        private void pbSlika_Click(object sender, EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                pbSlika.Image = Image.FromFile(openFileDialog1.FileName);
-            }
-        }
-
         private void btnIzbrisi_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Da li ste sigurni da želite izbrisati studenta", "Potvrda", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -75,6 +68,7 @@ namespace Student.AO.forme
             {
                 if (studenti == null)
                 {
+                    int brojKartice = db.Studenti.Any() ? db.Studenti.Max(s => s.BrojKartice) + 1 : 1;
                     var noviStudent = new Studenti
                     {
                         Ime = tbIme.Text,
@@ -120,6 +114,14 @@ namespace Student.AO.forme
         private void btnBack_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void pbSlika_Click_1(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pbSlika.Image = Image.FromFile(openFileDialog1.FileName);
+            }
         }
     }
 }
