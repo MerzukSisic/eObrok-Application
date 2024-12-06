@@ -1,7 +1,7 @@
 ﻿using apk.baza;
 using apk.klase;
 
-namespace Student.AO.forme
+namespace App.forms
 {
     public partial class frmUnesiBrojKartice : Form
     {

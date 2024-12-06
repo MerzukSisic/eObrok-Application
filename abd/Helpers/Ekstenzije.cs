@@ -1,7 +1,7 @@
 ﻿
 using System.Drawing.Imaging;
 
-namespace Student.AO.Helpers
+namespace App.Helpers
 {
     public static class Ekstenzije
     {

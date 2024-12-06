@@ -1,4 +1,4 @@
-﻿using Student.AO.forme.ControlAdmin;
+﻿using App.forms.ControlAdmin;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Student.AO.forme
+namespace App.forms
 {
     public partial class frmForAdmin : Form
     {

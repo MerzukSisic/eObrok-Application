@@ -11,10 +11,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Windows.Forms;
-using Student.AO.Helpers;
+using App.Helpers;
 
 
-namespace Student.AO.forme
+namespace App.forms
 {
     public partial class frmNoviStudent : Form
     {

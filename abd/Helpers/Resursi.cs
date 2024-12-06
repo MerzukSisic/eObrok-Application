@@ -1,12 +1,12 @@
 ﻿using System.Reflection;
 using System.Resources;
 
-namespace Student.AO.Helpers
+namespace App.Helpers
 {
     //public class Resursi
     //{
     //    static ResourceManager Manager =
-    //           new ResourceManager("Student.AO", Assembly.GetExecutingAssembly());
+    //           new ResourceManager("App", Assembly.GetExecutingAssembly());
 
     //    public static string Get(string name)
     //    {

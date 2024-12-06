@@ -1,4 +1,4 @@
-﻿namespace Student.AO.forme.ControlAdmin
+﻿namespace App.forms.ControlAdmin
 {
     partial class frmPretragaKonobara
     {

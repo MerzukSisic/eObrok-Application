@@ -1,5 +1,4 @@
-﻿namespace Student.AO.forme
-{
+﻿namespace App.forms{
     partial class frmStudenti
     {
         /// <summary>

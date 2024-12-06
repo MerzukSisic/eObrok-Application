@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\apk.klase\Student.Klase.csproj" />
+    <ProjectReference Include="..\apk.klase\App.Class.csproj" />
   </ItemGroup>
 
 </Project>

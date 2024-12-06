@@ -1,4 +1,4 @@
-﻿namespace Student.AO.Helpers
+﻿namespace App.Helpers
 {
     public class Validator
     {

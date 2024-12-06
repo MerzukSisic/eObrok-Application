@@ -2,7 +2,7 @@
 using apk.klase;
 using System.Data;
 
-namespace Student.AO.forme
+namespace App.forms
 {
     public partial class frmStudenti : Form
     {

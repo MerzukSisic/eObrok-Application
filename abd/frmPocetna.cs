@@ -1,17 +1,8 @@
 ﻿using apk.baza;
-using apk.klase;
-using Student.AO.forme;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using App.forms;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
-namespace Student.AO
+namespace App
 {
     public partial class frmPocetna : Form
     {

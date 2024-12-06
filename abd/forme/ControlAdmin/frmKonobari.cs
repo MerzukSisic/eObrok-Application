@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Student.AO.forme.ControlAdmin
+namespace App.forms.ControlAdmin
 {
     public partial class frmPretragaKonobara : Form
     {

@@ -1,6 +1,6 @@
-using Student.AO.forme;
+using App.forms;
 
-namespace Student.AO
+namespace App
 {
     internal static class Program
     {

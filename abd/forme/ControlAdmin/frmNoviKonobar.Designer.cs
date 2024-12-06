@@ -1,4 +1,6 @@
-﻿namespace Student.AO.forme
+﻿using static Guna.UI2.WinForms.Suite.Descriptions;
+
+namespace App.forms
 {
     partial class frmNoviKonobar
     {

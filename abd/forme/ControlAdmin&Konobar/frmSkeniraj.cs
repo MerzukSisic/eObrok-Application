@@ -1,8 +1,8 @@
 ﻿using apk.baza;
 using apk.klase;
-using Student.AO.Helpers;
+using App.Helpers;
 
-namespace Student.AO.forme
+namespace App.forms
 {
     public partial class frmSkeniraj : Form
     {

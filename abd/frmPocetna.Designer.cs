@@ -1,4 +1,6 @@
-﻿namespace Student.AO
+﻿using static Guna.UI2.WinForms.Suite.Descriptions;
+
+namespace App
 {
     partial class frmPocetna
     {

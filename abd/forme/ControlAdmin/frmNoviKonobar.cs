@@ -1,6 +1,6 @@
 ﻿using apk.baza;
 using apk.klase;
-using Student.AO.Helpers;
+using App.Helpers;
 using Student.Klase;
 using System;
 using System.Collections.Generic;
@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Student.AO.forme
+namespace App.forms
 {
     public partial class frmNoviKonobar : Form
     {

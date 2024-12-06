@@ -22,8 +22,8 @@
 	</ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\apk.baza\Student.Baza.csproj" />
-    <ProjectReference Include="..\apk.klase\Student.Klase.csproj" />
+    <ProjectReference Include="..\apk.baza\App.Database.csproj" />
+    <ProjectReference Include="..\apk.klase\App.Class.csproj" />
   </ItemGroup>
 
 	<ItemGroup>

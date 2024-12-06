@@ -11,10 +11,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
 using System.Windows.Forms;
-using Student.AO.Helpers;
+using App.Helpers;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace Student.AO.forme
+namespace App.forms
 {
     public partial class frmLogin : Form
     {
@@ -47,8 +47,8 @@ namespace Student.AO.forme
                     {
                         this.Hide();
                         MessageBox.Show("Dobrodošli " + korisnik.Ime);
-                        var novaForma = new frmPocetna();     
-                            novaForma.ShowDialog();
+                        var novaForma = new frmPocetna();
+                        novaForma.ShowDialog();
                         this.Show();
                     }
                 }
