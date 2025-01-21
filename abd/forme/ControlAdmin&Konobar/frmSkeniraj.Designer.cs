@@ -67,6 +67,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             guna2ControlBox11 = new Guna.UI2.WinForms.Guna2ControlBox();
             guna2ControlBox12 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -89,13 +91,15 @@
             tbBrojKartice = new Guna.UI2.WinForms.Guna2TextBox();
             tbPrezime = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            tbBrojObroka = new Guna.UI2.WinForms.Guna2TextBox();
             btnSkeniraj = new Guna.UI2.WinForms.Guna2Button();
             cbRucak = new Guna.UI2.WinForms.Guna2CheckBox();
             cbVecera = new Guna.UI2.WinForms.Guna2CheckBox();
             cbDupliRucak = new Guna.UI2.WinForms.Guna2CheckBox();
             cbDuplaVecera = new Guna.UI2.WinForms.Guna2CheckBox();
+            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            tbBrojObrokaVecera = new Guna.UI2.WinForms.Guna2TextBox();
+            tbBrojObrokaRucak = new Guna.UI2.WinForms.Guna2TextBox();
             guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbSlika).BeginInit();
             SuspendLayout();
@@ -416,6 +420,7 @@
             tbBrojKartice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbBrojKartice.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             tbBrojKartice.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbBrojKartice.Enabled = false;
             tbBrojKartice.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbBrojKartice.Font = new Font("Segoe UI", 9F);
             tbBrojKartice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
@@ -459,36 +464,6 @@
             guna2HtmlLabel3.TabIndex = 16;
             guna2HtmlLabel3.Text = "Prezime:";
             // 
-            // guna2HtmlLabel4
-            // 
-            guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Location = new Point(228, 227);
-            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(67, 17);
-            guna2HtmlLabel4.TabIndex = 16;
-            guna2HtmlLabel4.Text = "Broj obroka:";
-            // 
-            // tbBrojObroka
-            // 
-            tbBrojObroka.CustomizableEdges = customizableEdges36;
-            tbBrojObroka.DefaultText = "";
-            tbBrojObroka.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbBrojObroka.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbBrojObroka.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbBrojObroka.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbBrojObroka.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbBrojObroka.Font = new Font("Segoe UI", 9F);
-            tbBrojObroka.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbBrojObroka.Location = new Point(228, 250);
-            tbBrojObroka.Name = "tbBrojObroka";
-            tbBrojObroka.PasswordChar = '\0';
-            tbBrojObroka.PlaceholderText = "";
-            tbBrojObroka.ReadOnly = true;
-            tbBrojObroka.SelectedText = "";
-            tbBrojObroka.ShadowDecoration.CustomizableEdges = customizableEdges37;
-            tbBrojObroka.Size = new Size(252, 22);
-            tbBrojObroka.TabIndex = 17;
-            // 
             // btnSkeniraj
             // 
             btnSkeniraj.Animated = true;
@@ -497,7 +472,7 @@
             btnSkeniraj.BorderThickness = 2;
             btnSkeniraj.CheckedState.FillColor = Color.Tan;
             btnSkeniraj.CheckedState.ForeColor = Color.Black;
-            btnSkeniraj.CustomizableEdges = customizableEdges38;
+            btnSkeniraj.CustomizableEdges = customizableEdges36;
             btnSkeniraj.DisabledState.BorderColor = Color.DarkGray;
             btnSkeniraj.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSkeniraj.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -510,7 +485,7 @@
             btnSkeniraj.Location = new Point(166, 349);
             btnSkeniraj.Name = "btnSkeniraj";
             btnSkeniraj.RightToLeft = RightToLeft.No;
-            btnSkeniraj.ShadowDecoration.CustomizableEdges = customizableEdges39;
+            btnSkeniraj.ShadowDecoration.CustomizableEdges = customizableEdges37;
             btnSkeniraj.Size = new Size(168, 38);
             btnSkeniraj.TabIndex = 0;
             btnSkeniraj.Text = "Skeniraj obrok";
@@ -588,20 +563,84 @@
             cbDuplaVecera.UncheckedState.BorderThickness = 0;
             cbDuplaVecera.UncheckedState.FillColor = Color.Tan;
             // 
+            // guna2HtmlLabel6
+            // 
+            guna2HtmlLabel6.BackColor = Color.Transparent;
+            guna2HtmlLabel6.Location = new Point(376, 227);
+            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            guna2HtmlLabel6.Size = new Size(104, 17);
+            guna2HtmlLabel6.TabIndex = 34;
+            guna2HtmlLabel6.Text = "Broj obroka večera:";
+            // 
+            // guna2HtmlLabel4
+            // 
+            guna2HtmlLabel4.BackColor = Color.Transparent;
+            guna2HtmlLabel4.Location = new Point(228, 227);
+            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            guna2HtmlLabel4.Size = new Size(99, 17);
+            guna2HtmlLabel4.TabIndex = 35;
+            guna2HtmlLabel4.Text = "Broj obroka ručak:";
+            // 
+            // tbBrojObrokaVecera
+            // 
+            tbBrojObrokaVecera.CustomizableEdges = customizableEdges38;
+            tbBrojObrokaVecera.DefaultText = "";
+            tbBrojObrokaVecera.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbBrojObrokaVecera.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbBrojObrokaVecera.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbBrojObrokaVecera.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbBrojObrokaVecera.Enabled = false;
+            tbBrojObrokaVecera.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbBrojObrokaVecera.Font = new Font("Segoe UI", 9F);
+            tbBrojObrokaVecera.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbBrojObrokaVecera.Location = new Point(376, 250);
+            tbBrojObrokaVecera.Name = "tbBrojObrokaVecera";
+            tbBrojObrokaVecera.PasswordChar = '\0';
+            tbBrojObrokaVecera.PlaceholderText = "";
+            tbBrojObrokaVecera.ReadOnly = true;
+            tbBrojObrokaVecera.SelectedText = "";
+            tbBrojObrokaVecera.ShadowDecoration.CustomizableEdges = customizableEdges39;
+            tbBrojObrokaVecera.Size = new Size(104, 22);
+            tbBrojObrokaVecera.TabIndex = 36;
+            // 
+            // tbBrojObrokaRucak
+            // 
+            tbBrojObrokaRucak.CustomizableEdges = customizableEdges40;
+            tbBrojObrokaRucak.DefaultText = "";
+            tbBrojObrokaRucak.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            tbBrojObrokaRucak.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            tbBrojObrokaRucak.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            tbBrojObrokaRucak.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            tbBrojObrokaRucak.Enabled = false;
+            tbBrojObrokaRucak.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbBrojObrokaRucak.Font = new Font("Segoe UI", 9F);
+            tbBrojObrokaRucak.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            tbBrojObrokaRucak.Location = new Point(228, 250);
+            tbBrojObrokaRucak.Name = "tbBrojObrokaRucak";
+            tbBrojObrokaRucak.PasswordChar = '\0';
+            tbBrojObrokaRucak.PlaceholderText = "";
+            tbBrojObrokaRucak.ReadOnly = true;
+            tbBrojObrokaRucak.SelectedText = "";
+            tbBrojObrokaRucak.ShadowDecoration.CustomizableEdges = customizableEdges41;
+            tbBrojObrokaRucak.Size = new Size(99, 22);
+            tbBrojObrokaRucak.TabIndex = 37;
+            // 
             // frmSkeniraj
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(499, 399);
+            Controls.Add(guna2HtmlLabel6);
+            Controls.Add(guna2HtmlLabel4);
+            Controls.Add(tbBrojObrokaVecera);
+            Controls.Add(tbBrojObrokaRucak);
             Controls.Add(cbVecera);
             Controls.Add(cbDuplaVecera);
             Controls.Add(cbDupliRucak);
             Controls.Add(cbRucak);
             Controls.Add(btnSkeniraj);
-            Controls.Add(tbBrojObroka);
             Controls.Add(tbPrezime);
-            Controls.Add(guna2HtmlLabel4);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(tbIme);
             Controls.Add(guna2HtmlLabel1);
@@ -644,13 +683,15 @@
         private Guna.UI2.WinForms.Guna2TextBox tbBrojKartice;
         private Guna.UI2.WinForms.Guna2TextBox tbPrezime;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox tbBrojObroka;
         private Guna.UI2.WinForms.Guna2Button btnSkeniraj;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2CheckBox cbRucak;
         private Guna.UI2.WinForms.Guna2CheckBox cbVecera;
         private Guna.UI2.WinForms.Guna2CheckBox cbDupliRucak;
         private Guna.UI2.WinForms.Guna2CheckBox cbDuplaVecera;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2TextBox tbBrojObrokaVecera;
+        private Guna.UI2.WinForms.Guna2TextBox tbBrojObrokaRucak;
     }
 }

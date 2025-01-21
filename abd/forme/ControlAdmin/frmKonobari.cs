@@ -29,7 +29,7 @@ namespace App.forms.ControlAdmin
 
         private void UcitajPodatke()
         {
-            UposleniciPodaci = db.Korisnici.ToList();
+            UposleniciPodaci = db.Korisnici.Where(x=>x.RoleId==2).ToList();
             if (UposleniciPodaci.Count > 0)
             {
                 var tabela = new DataTable();

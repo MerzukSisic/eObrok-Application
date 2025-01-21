@@ -568,7 +568,7 @@
             lbl.Name = "lbl";
             lbl.Size = new Size(56, 17);
             lbl.TabIndex = 26;
-            lbl.Text = "Uplaceno:";
+            lbl.Text = "Uplaćeno:";
             // 
             // btnObnoviObroke
             // 

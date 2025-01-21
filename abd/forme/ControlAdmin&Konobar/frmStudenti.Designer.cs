@@ -62,7 +62,8 @@
             dgvStudenti = new Guna.UI2.WinForms.Guna2DataGridView();
             Ime = new DataGridViewTextBoxColumn();
             Prezime = new DataGridViewTextBoxColumn();
-            BrojObroka = new DataGridViewTextBoxColumn();
+            BrojObrokaRucak = new DataGridViewTextBoxColumn();
+            BrojObrokaVecera = new DataGridViewTextBoxColumn();
             Datum = new DataGridViewTextBoxColumn();
             Placeno = new DataGridViewCheckBoxColumn();
             Dodaj = new DataGridViewButtonColumn();
@@ -298,7 +299,7 @@
             dgvStudenti.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvStudenti.ColumnHeadersHeight = 20;
             dgvStudenti.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dgvStudenti.Columns.AddRange(new DataGridViewColumn[] { Ime, Prezime, BrojObroka, Datum, Placeno, Dodaj });
+            dgvStudenti.Columns.AddRange(new DataGridViewColumn[] { Ime, Prezime, BrojObrokaRucak, BrojObrokaVecera, Datum, Placeno, Dodaj });
             dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = Color.White;
             dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
@@ -362,13 +363,21 @@
             Prezime.Name = "Prezime";
             Prezime.ReadOnly = true;
             // 
-            // BrojObroka
+            // BrojObrokaRucak
             // 
-            BrojObroka.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            BrojObroka.DataPropertyName = "BrojObroka";
-            BrojObroka.HeaderText = "Broj obroka";
-            BrojObroka.Name = "BrojObroka";
-            BrojObroka.ReadOnly = true;
+            BrojObrokaRucak.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            BrojObrokaRucak.DataPropertyName = "BrojObrokaRucak";
+            BrojObrokaRucak.HeaderText = "Broj obroka ručak";
+            BrojObrokaRucak.Name = "BrojObrokaRucak";
+            BrojObrokaRucak.ReadOnly = true;
+            // 
+            // BrojObrokaVecera
+            // 
+            BrojObrokaVecera.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            BrojObrokaVecera.DataPropertyName = "BrojObrokaVecera";
+            BrojObrokaVecera.HeaderText = "Broj obroka večera";
+            BrojObrokaVecera.Name = "BrojObrokaVecera";
+            BrojObrokaVecera.ReadOnly = true;
             // 
             // Datum
             // 
@@ -382,7 +391,7 @@
             // 
             Placeno.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             Placeno.DataPropertyName = "Placeno";
-            Placeno.HeaderText = "Placeno";
+            Placeno.HeaderText = "Plaćeno";
             Placeno.Name = "Placeno";
             Placeno.ReadOnly = true;
             // 
@@ -439,12 +448,13 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnBack;
         private Guna.UI2.WinForms.Guna2Button btnDodaj;
         private Guna.UI2.WinForms.Guna2DataGridView dgvStudenti;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private DataGridViewTextBoxColumn Ime;
         private DataGridViewTextBoxColumn Prezime;
-        private DataGridViewTextBoxColumn BrojObroka;
+        private DataGridViewTextBoxColumn BrojObrokaRucak;
+        private DataGridViewTextBoxColumn BrojObrokaVecera;
         private DataGridViewTextBoxColumn Datum;
         private DataGridViewCheckBoxColumn Placeno;
         private DataGridViewButtonColumn Dodaj;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
     }
 }

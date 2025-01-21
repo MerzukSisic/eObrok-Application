@@ -46,8 +46,8 @@ namespace App
             btnPretraga = new Guna.UI2.WinForms.Guna2Button();
             btnSkenirajObrok = new Guna.UI2.WinForms.Guna2Button();
             guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            lbBr = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnBack = new Guna.UI2.WinForms.Guna2ImageButton();
+            lbBr = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2CustomGradientPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -167,16 +167,6 @@ namespace App
             guna2CustomGradientPanel1.Size = new Size(517, 40);
             guna2CustomGradientPanel1.TabIndex = 6;
             // 
-            // lbBr
-            // 
-            lbBr.BackColor = Color.Transparent;
-            lbBr.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lbBr.Location = new Point(181, 77);
-            lbBr.Name = "lbBr";
-            lbBr.Size = new Size(3, 2);
-            lbBr.TabIndex = 7;
-            lbBr.Text = null;
-            // 
             // btnBack
             // 
             btnBack.BackColor = Color.Transparent;
@@ -194,6 +184,16 @@ namespace App
             btnBack.Size = new Size(55, 20);
             btnBack.TabIndex = 9;
             btnBack.Click += btnBack_Click;
+            // 
+            // lbBr
+            // 
+            lbBr.BackColor = Color.Transparent;
+            lbBr.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            lbBr.Location = new Point(181, 77);
+            lbBr.Name = "lbBr";
+            lbBr.Size = new Size(3, 2);
+            lbBr.TabIndex = 7;
+            lbBr.Text = null;
             // 
             // frmPocetna
             // 

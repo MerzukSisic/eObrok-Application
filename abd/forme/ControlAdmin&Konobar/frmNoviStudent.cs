@@ -73,7 +73,8 @@ namespace App.forms
                     {
                         Ime = tbIme.Text,
                         Prezime = tbPrezime.Text,
-                        BrojObroka = 44,
+                        BrojObrokaRucak = 22,
+                        BrojObrokaVecera = 22,
                         BrojKartice = (db.Studenti.Any() ? db.Studenti.Max(s => s.BrojKartice) + 1 : 001),
                         Datum = DateTime.Now,
                         Slika = Ekstenzije.ToByteArray(pbSlika.Image),
@@ -97,7 +98,8 @@ namespace App.forms
 
         private void btnObnoviObroke_Click(object sender, EventArgs e)
         {
-            studenti.BrojObroka = 44;
+            studenti.BrojObrokaRucak = 22;
+            studenti.BrojObrokaVecera = 22;
             studenti.Datum = DateTime.Now;
             db.Studenti.Update(studenti);
             db.SaveChanges();

@@ -29,7 +29,8 @@ namespace App.forms
             pbSlika.Image = Ekstenzije.ToImage(student.Slika);
             tbIme.Text = student.Ime;
             tbPrezime.Text = student.Prezime;
-            tbBrojObroka.Text = student.BrojObroka.ToString();
+            tbBrojObrokaRucak.Text = student.BrojObrokaRucak.ToString();
+            tbBrojObrokaVecera.Text = student.BrojObrokaVecera.ToString();
             tbBrojKartice.Text = student.BrojKartice.ToString();
             cbRucak.Checked = student.JeoRucak;
             cbVecera.Checked = student.JeoVeceru;
@@ -56,49 +57,56 @@ namespace App.forms
         private void btnSkeniraj_Click(object sender, EventArgs e)
         {
             DateTime trenutnoVrijeme = DateTime.Now;
+            int ukupnoObroka = student.BrojObrokaVecera + student.BrojObrokaRucak;
 
-            if (student.BrojObroka > 0)
+            if (ukupnoObroka > 0)
             {
                 TimeSpan vrijemeRazlike = trenutnoVrijeme - student.VrijemeZadnjegObroka;
 
                 if (vrijemeRazlike.TotalHours <= 2)
                 {
-                    if (student.JeoRucak)
+                    if (student.JeoRucak && student.BrojObrokaRucak > 0)
                     {
                         student.DupliRucak = true;
                         cbDupliRucak.Checked = true;
+                        student.BrojObrokaRucak--;
+                        MessageBox.Show("Student je iskoristio dupli ručak.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
-                    else if (student.JeoVeceru)
+                    else if (student.JeoVeceru && student.BrojObrokaVecera > 0)
                     {
                         student.DuplaVecera = true;
                         cbDuplaVecera.Checked = true;
+                        student.BrojObrokaVecera--;
+                        MessageBox.Show("Student je iskoristio duplu večeru.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
 
                 if (trenutnoVrijeme.Hour >= 12 && trenutnoVrijeme.Hour < 17)
                 {
-                    if (!student.JeoRucak)
+                    if (!student.JeoRucak && student.BrojObrokaRucak > 0)
                     {
                         student.JeoRucak = true;
                         student.VrijemeZadnjegObroka = trenutnoVrijeme;
+                        student.BrojObrokaRucak--;
                         MessageBox.Show("Student je pojeo ručak.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Student je već pojeo ručak.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Student je već pojeo ručak ili nema obroka za ručak.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else if (trenutnoVrijeme.Hour >= 17 && trenutnoVrijeme.Hour < 21)
                 {
-                    if (!student.JeoVeceru)
+                    if (!student.JeoVeceru && student.BrojObrokaVecera > 0)
                     {
                         student.JeoVeceru = true;
                         student.VrijemeZadnjegObroka = trenutnoVrijeme;
+                        student.BrojObrokaVecera--;
                         MessageBox.Show("Student je pojeo večeru.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Student je već pojeo večeru.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Student je već pojeo večeru ili nema obroka za večeru.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
                 else
@@ -115,11 +123,11 @@ namespace App.forms
                         MessageBox.Show("Obrok nije iskorišten.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                student.BrojObroka--;
+
                 db.Studenti.Update(student);
                 db.SaveChanges();
-                MessageBox.Show($"Broj obroka smanjen. Preostalo: {student.BrojObroka}", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                MessageBox.Show($"Broj obroka smanjen. Preostalo ručkova: {student.BrojObrokaRucak}, večera: {student.BrojObrokaVecera}", "Informacija", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             else

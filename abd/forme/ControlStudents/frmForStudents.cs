@@ -29,14 +29,15 @@ namespace App.forms
             tbPrezime.Text = student.Prezime;
             pbSlika.Image = Ekstenzije.ToImage(student.Slika);
             dtpUplaceno.Value = student.Datum;
-            tbBrojObroka.Text = student.BrojObroka.ToString();
+            tbBrojObrokaRucak.Text = student.BrojObrokaRucak.ToString();
+            tbBrojObrokaVecera.Text = student.BrojObrokaVecera.ToString();
 
             CheckStatus();
 
         }
         private void CheckStatus()
         {
-            int brojObroka = student.BrojObroka; // Broj obroka iz objekta student
+            int brojObroka = student.BrojObrokaRucak + student.BrojObrokaVecera; // Broj obroka iz objekta student
             DateTime datumUplate = student.Datum; // Datum uplate iz objekta student
             DateTime danasnjiDatum = DateTime.Now;
 

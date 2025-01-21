@@ -5,7 +5,8 @@
         public int Id { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public int BrojObroka { get; set; }
+        public int BrojObrokaRucak { get; set; }
+        public int BrojObrokaVecera { get; set; }
         public int BrojKartice { get; set; }
         public DateTime Datum { get; set; }
         public DateTime VrijemeZadnjegObroka { get; set; }
