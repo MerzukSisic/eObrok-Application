@@ -1,21 +1,61 @@
-# Aplikacija za obroke u restoranu
+# Meal Management Application
 
-## Opis
-Ova aplikacija je dizajnirana za studente koji koriste obroke u restoranu. Omogućava jednostavno upravljanje studentima, njihovim obrocima i uplatama putem intuitivnog korisničkog interfejsa.
+## Description
+This application is designed for students who use meal services in a restaurant. It provides an intuitive interface for managing **students, their meals, and payments** efficiently.
 
-## Funkcionalnosti
-- **Prikaz podataka o studentima**: Prikazuje informacije kao što su ime, prezime, broj obroka i datum uplate.
-- **Dodavanje/uređivanje studenata**: Omogućava dodavanje novih studenata ili uređivanje postojećih podataka.
-- **Skeniranje broja kartice**: Omogućava skeniranje broja kartice studenta, prikazivanje njegovih podataka i oduzimanje obroka s računa.
+## Features
+- **Student Data Management** – Displays student information such as name, surname, number of meals, and last payment date.
+- **Add/Edit Student Records** – Allows adding new students or modifying existing details.
+- **Card Number Scanning** – Enables scanning a student’s card number, displaying their details, and deducting meals from their account.
 
-## Tehnologije
-- **C#**: Programski jezik korišćen za razvoj aplikacije.
-- **SQLite**: Baza podataka korišćena za čuvanje podataka o studentima i obrocima.
+## Technologies Used
+- **C#** – Primary programming language for application development.
+- **SQLite** – Database system used for storing student and meal records.
 
-## Kako pokrenuti
-1. Klonirajte repozitorij:
+## Screenshots
+
+### **Login Screen**
+![Login Screen](images/Login.png)
+
+### **Starting Page (Admin)**
+![Starting Page Admin](images/startingPageAdmin.png)
+
+### **Starting Page (Waiter)**
+![Starting Page Waiter](images/startingPageWaiter.png)
+
+### **Student Search**
+![Student Search](images/StudentsSearch.png)
+
+### **Adding a Student**
+![Adding Student](images/addingStudent.png)
+
+### **Editing Student Information**
+![Editing Student](images/EditingStudent.png)
+
+### **Waiter Search**
+![Waiter Search](images/WaiterSearch.png)
+
+### **Editing Waiter Information**
+![Editing Waiter](images/EditingWaiter.png)
+
+### **Adding a Waiter**
+![Adding Waiter](images/addingWaiter.png)
+
+### **Scanning Student Card**
+![Scanning Card](images/ScanStudent.png)
+
+### **Scanned Student Data**
+![Scanned Student](images/ScannedStudent.png)
+
+### **Student Data Overview**
+![Student Data](images/Student.png)
+
+## How to Run the Application
+
+1. **Clone the Repository**:
    ```bash
    git clone https://github.com/MerzukSisic/Student-AO-Obroci.git
-2.Otvorite projekat u Visual Studio-u.
-3.Instalirajte potrebne pakete i biblioteke.
-4.Pokrenite aplikaciju.
+
+2. Open the Project in Visual Studio.
+3. Install Required Packages (if necessary).
+4. Run the Application

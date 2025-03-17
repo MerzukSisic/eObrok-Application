@@ -422,7 +422,6 @@
             Font = new Font("Segoe UI", 9F);
             ForeColor = SystemColors.ActiveCaptionText;
             FormBorderStyle = FormBorderStyle.None;
-            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmStudenti";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Studenti";
