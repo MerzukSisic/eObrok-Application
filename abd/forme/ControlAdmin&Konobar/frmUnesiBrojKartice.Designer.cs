@@ -314,7 +314,6 @@
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(guna2CustomGradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmUnesiBrojKartice";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Broj kartice";

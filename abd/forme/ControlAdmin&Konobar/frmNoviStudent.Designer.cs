@@ -647,7 +647,6 @@
             Controls.Add(pbSlika);
             Controls.Add(guna2CustomGradientPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "frmNoviStudent";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Podaci o studentu";
