@@ -1,18 +1,5 @@
 ﻿using apk.baza;
 using apk.klase;
-using Student.Klase;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Linq;
-using System.Windows.Forms;
-using App.Helpers;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace App.forms
 {
@@ -35,15 +22,15 @@ namespace App.forms
 
                 if (korisnik != null)
                 {
-                    if (korisnik.RoleId == 1)  
+                    if (korisnik.RoleId == 1)
                     {
                         this.Hide();
                         MessageBox.Show("Dobrodošli " + korisnik.Ime);
-                        var novaForma = new frmForAdmin();  
+                        var novaForma = new frmForAdmin();
                         novaForma.ShowDialog();
                         this.Show();
                     }
-                    else if (korisnik.RoleId == 2)  
+                    else if (korisnik.RoleId == 2)
                     {
                         this.Hide();
                         MessageBox.Show("Dobrodošli " + korisnik.Ime);

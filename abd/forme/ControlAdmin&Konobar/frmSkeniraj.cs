@@ -47,9 +47,9 @@ namespace App.forms
                 student.DupliRucak = false;
                 student.DuplaVecera = false;
 
-                student.DatumResetovanja = DateTime.Now; 
+                student.DatumResetovanja = DateTime.Now;
 
-                db.Studenti.Update(student); 
+                db.Studenti.Update(student);
                 db.SaveChanges();
             }
         }
@@ -63,24 +63,6 @@ namespace App.forms
             {
                 TimeSpan vrijemeRazlike = trenutnoVrijeme - student.VrijemeZadnjegObroka;
 
-                if (vrijemeRazlike.TotalHours <= 2)
-                {
-                    if (student.JeoRucak && student.BrojObrokaRucak > 0)
-                    {
-                        student.DupliRucak = true;
-                        cbDupliRucak.Checked = true;
-                        student.BrojObrokaRucak--;
-                        MessageBox.Show("Student je iskoristio dupli ručak.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else if (student.JeoVeceru && student.BrojObrokaVecera > 0)
-                    {
-                        student.DuplaVecera = true;
-                        cbDuplaVecera.Checked = true;
-                        student.BrojObrokaVecera--;
-                        MessageBox.Show("Student je iskoristio duplu večeru.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-
                 if (trenutnoVrijeme.Hour >= 12 && trenutnoVrijeme.Hour < 17)
                 {
                     if (!student.JeoRucak && student.BrojObrokaRucak > 0)
@@ -89,6 +71,13 @@ namespace App.forms
                         student.VrijemeZadnjegObroka = trenutnoVrijeme;
                         student.BrojObrokaRucak--;
                         MessageBox.Show("Student je pojeo ručak.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else if (student.JeoRucak && student.BrojObrokaRucak > 0)
+                    {
+                        student.DupliRucak = true;
+                        cbDupliRucak.Checked = true;
+                        student.BrojObrokaRucak--;
+                        MessageBox.Show("Student je iskoristio dupli ručak.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
@@ -104,6 +93,14 @@ namespace App.forms
                         student.BrojObrokaVecera--;
                         MessageBox.Show("Student je pojeo večeru.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
+                    else if
+                        (student.JeoVeceru && student.BrojObrokaVecera > 0)
+                    {
+                        student.DuplaVecera = true;
+                        cbDuplaVecera.Checked = true;
+                        student.BrojObrokaVecera--;
+                        MessageBox.Show("Student je iskoristio duplu večeru.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                     else
                     {
                         MessageBox.Show("Student je već pojeo večeru ili nema obroka za večeru.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -116,11 +113,13 @@ namespace App.forms
                     if (rezultat == DialogResult.Yes)
                     {
                         student.VrijemeZadnjegObroka = trenutnoVrijeme;
+                        student.BrojObrokaRucak--;
                         MessageBox.Show("Obrok je uspješno iskorišten izvan predviđenog vremena.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
                         MessageBox.Show("Obrok nije iskorišten.", "Obavijest", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        return;
                     }
                 }
 

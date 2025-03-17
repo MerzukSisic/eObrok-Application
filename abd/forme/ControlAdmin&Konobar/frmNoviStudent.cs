@@ -1,20 +1,8 @@
 ﻿using apk.baza;
 using apk.klase;
-using Student.Klase;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Linq;
-using System.Windows.Forms;
 using App.Helpers;
 
-
-namespace App.forms
+namespace App.forme.ControlAdmin_Konobar
 {
     public partial class frmNoviStudent : Form
     {
@@ -38,11 +26,22 @@ namespace App.forms
         {
             if (studenti != null)
             {
+                // Ako uređujemo postojećeg studenta, prikaži dugmad "Izbriši" i "Obnovi Obroke"
+                btnIzbrisi.Visible = true;
+                btnObnoviObroke.Visible = true;
+
+                // Popuni polja s podacima postojećeg studenta
                 tbBrojKartice.Text = studenti.BrojKartice.ToString();
                 tbIme.Text = studenti.Ime;
                 tbPrezime.Text = studenti.Prezime;
                 pbSlika.Image = Ekstenzije.ToImage(studenti.Slika);
                 dtpUplaceno.Value = studenti.Datum;
+            }
+            else
+            {
+                // Ako dodajemo novog studenta, sakrij dugmad "Izbriši" i "Obnovi Obroke"
+                btnIzbrisi.Visible = false;
+                btnObnoviObroke.Visible = false;
             }
         }
         private void btnIzbrisi_Click(object sender, EventArgs e)
@@ -108,11 +107,24 @@ namespace App.forms
 
         private void btnIzbrisi_Click_1(object sender, EventArgs e)
         {
-            db.Studenti.Remove(studenti);
-            db.SaveChanges();
-            Close();
-        }
+            // Prikaz potvrdnog dijaloga
+            DialogResult result = MessageBox.Show(
+                "Da li ste sigurni da želite izbrisati studenta?", // Poruka
+                "Potvrda brisanja",                                // Naslov
+                MessageBoxButtons.YesNo,                          // Tip dugmadi (Yes/No)
+                MessageBoxIcon.Question                           // Ikona (upitnik)
+            );
 
+            // Provjera odgovora korisnika
+            if (result == DialogResult.Yes)
+            {
+                // Ako korisnik odabere "Yes", izbriši studenta
+                db.Studenti.Remove(studenti);
+                db.SaveChanges();
+                Close(); // Zatvori formu nakon brisanja
+            }
+            // Ako korisnik odabere "No", ne radi ništa
+        }
         private void btnBack_Click(object sender, EventArgs e)
         {
             Close();
@@ -127,4 +139,3 @@ namespace App.forms
         }
     }
 }
-

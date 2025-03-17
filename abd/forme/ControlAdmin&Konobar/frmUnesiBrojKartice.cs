@@ -15,7 +15,7 @@ namespace App.forms
         }
         private void frmUnesiBrojKartice_Load(object sender, EventArgs e)
         {
-         
+
         }
 
         private void btnDodaj_Click(object sender, EventArgs e)

@@ -18,7 +18,7 @@ namespace App.Helpers
             comboBox.ValueMember = valueMember;
         }
         public static Image ToImage(this byte[] sadrzaj)
-        {            
+        {
             var ms = new MemoryStream(sadrzaj);
             return Image.FromStream(ms);
         }
