@@ -1,7 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.Configuration;
-using apk.klase;
+﻿using apk.klase;
+using Microsoft.EntityFrameworkCore;
 using Student.Klase;
+using System.Configuration;
 
 namespace apk.baza
 {
@@ -21,7 +21,7 @@ namespace apk.baza
         }
 
         public DbSet<Studenti> Studenti { get; set; }
-        public DbSet<Uposlenici> Korisnici { get;set; }
-        public DbSet<Roles> Roles { get;set; }
+        public DbSet<Uposlenici> Korisnici { get; set; }
+        public DbSet<Roles> Roles { get; set; }
     }
 }

@@ -1,7 +1,4 @@
-﻿using System.Reflection;
-using System.Resources;
-
-namespace App.Helpers
+﻿namespace App.Helpers
 {
     //public class Resursi
     //{

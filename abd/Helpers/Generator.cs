@@ -11,7 +11,7 @@
                 lozinka += znakovi[rand.Next(0, znakovi.Length)];
             return lozinka;
         }
-      
-    
+
+
     }
 }

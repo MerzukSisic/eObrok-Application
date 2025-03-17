@@ -1,15 +1,6 @@
 ﻿using apk.baza;
-using apk.klase;
 using Student.Klase;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace App.forms.ControlAdmin
 {
@@ -29,7 +20,7 @@ namespace App.forms.ControlAdmin
 
         private void UcitajPodatke()
         {
-            UposleniciPodaci = db.Korisnici.Where(x=>x.RoleId==2).ToList();
+            UposleniciPodaci = db.Korisnici.Where(x => x.RoleId == 2).ToList();
             if (UposleniciPodaci.Count > 0)
             {
                 var tabela = new DataTable();

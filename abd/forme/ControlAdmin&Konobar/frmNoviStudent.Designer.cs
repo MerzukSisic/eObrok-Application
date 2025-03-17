@@ -1,4 +1,4 @@
-﻿namespace App.forms
+﻿namespace App.forme.ControlAdmin_Konobar
 {
     partial class frmNoviStudent
     {
